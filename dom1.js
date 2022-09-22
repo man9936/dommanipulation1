@@ -52,3 +52,24 @@ let newL=document.createElement('li');
 newL.innerHTML='item by class name changed';
 ul[0].appendChild(newL);
 
+
+let items=document.getElementsByClassName('list-group-item');
+console.log(items);
+console.log(items[2]);
+items[1].style.background='green';
+items[2].style.display='none';
+*/
+
+
+/*
+console.log(list);
+
+list[1].style.color='green';
+*/
+let list=document.querySelectorAll("li");
+for(let i=0;i<list.length;i+2)
+{
+    list[i].style.background='green';
+}
+console.log(list);
+
