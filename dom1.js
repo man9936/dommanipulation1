@@ -30,7 +30,6 @@ console.log(items[2]);
 /*
 items[2].textContent='helloyoutoo';
 items[2].style.fontWeight='bold';
-
 */
 for(var i=0;i<items.length ; i++)
 {
