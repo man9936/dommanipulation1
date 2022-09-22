@@ -90,3 +90,63 @@ let first=document.querySelector("ul");
 let li=document.querySelector(".list-group-item");
 first.insertBefore(list,li);
 ///////////////////////////////////////////
+
+task-8
+/////////////////////////////////////////////////
+create new list and remove it
+var form=document.getElementById('addForm');
+var itemList= document.getElementById('items');
+
+form.addEventListener('submit', addItem);
+
+function addItem(e){
+    e.preventDefault();
+
+  let inp=document.getElementById("item").value;
+   
+  let li=document.createElement("li");
+  li.className="list-group-item";
+
+  li.appendChild(document.createTextNode(inp));
+  itemList.appendChild(li);
+
+  let del=document.createElement('button');
+  del.className="btn btn-danger btn-sm float-right delete";
+
+  del.appendChild(document.createTextNode("x"));
+
+  li.appendChild(del);
+
+
+}
+
+=========================>>>>>>>>>>>>>>>REMOVE THE ITEM
+itemList.addEventListener('click',remove);
+
+function remove(e){
+
+
+if(e.target.classList.contains('delete'))
+{
+    if(confirm('are you sure that you want to delete this item?')){
+
+        let li=e.target.parentElement;
+        itemList.removeChild(li); //list is the parent
+    }
+}
+
+
+}
+
+
+ADDING THE EDIT BUTTON
+let list=document.querySelectorAll(".list-group-item")
+console.log(list);
+for(i=0;i<list.length;i++)
+{
+    var edit=document.createElement("button");
+edit.className="btn btn-primary btn-sm float-right";
+edit.appendChild(document.createTextNode("Edit"));
+    list[i].appendChild(edit);
+}
+//////////////////////////////////////////////////////////////////////////////////////////////
