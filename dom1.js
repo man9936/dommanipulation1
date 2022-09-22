@@ -35,3 +35,20 @@ for(var i=0;i<items.length ; i++)
 }
 items[2].style.backgroundColor='green';
 
+/*
+let ul= document.getElementsByTagName("ul");
+console.log(ul);
+
+let l1=document.createElement("li");
+l1.textContent='item 5';
+l1.className='js-created';
+ul[0].appendChild(l1);
+*/
+let ul= document.getElementsByClassName("list-group");
+console.log(ul);
+
+
+let newL=document.createElement('li');
+newL.innerHTML='item by class name changed';
+ul[0].appendChild(newL);
+
