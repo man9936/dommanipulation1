@@ -73,3 +73,20 @@ for(let i=0;i<list.length;i+2)
 }
 console.log(list);
 
+task-7//////////////////////////////////////
+var items= document.querySelector("#items");
+let newdiv=document.createElement("div");
+let newNode=document.createTextNode("HEllo");
+newdiv.appendChild(newNode);
+let h1=document.querySelector("header h1");
+let container=document.querySelector("header .container");
+container.insertBefore(newdiv,h1);
+
+let list=document.createElement("li");
+let hello=document.createTextNode("HEllo");
+list.appendChild(hello);
+
+let first=document.querySelector("ul");
+let li=document.querySelector(".list-group-item");
+first.insertBefore(list,li);
+///////////////////////////////////////////
