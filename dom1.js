@@ -150,3 +150,40 @@ edit.appendChild(document.createTextNode("Edit"));
     list[i].appendChild(edit);
 }
 //////////////////////////////////////////////////////////////////////////////////////////////
+TASK9 part 1
+let filter=document.getElementById("filter");
+filter.addEventListener('keyup',filterItems);
+
+function filterItems(e) {
+  var text=e.target.value.toLowerCase();
+  var items=itemList.getElementsByTagName('li');
+  
+Array.from(items).forEach(function(item){
+  var itemName = item.firstChild.textContent;
+  if(itemName.toLowerCase().indexOf(text)!= -1) {
+    item.style.display='block';
+}                
+else{
+  item.style.display='none';
+}                          
+    
+
+});
+}
+
+
+
+
+
+let sub=document.getElementsByClassName("btn btn-dark");
+let newText= document.getElementById("addForm");
+let newInput=document.createElement("input");
+newInput.type="text";
+newInput.className="form-control mr-2";
+
+
+console.log(newText.children);
+newText.insertBefore(newInput,newText.children[1]);
+
+
+///////////////////////////////////////////
